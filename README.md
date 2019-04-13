@@ -16,5 +16,7 @@ Thanks
 references
 
 https://facebook.github.io/react-native/docs/tutorial
+
 https://github.com/jscomplete/react-native-essential-training
+
 https://www.tutorialspoint.com/es6
