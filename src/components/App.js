@@ -10,7 +10,7 @@ import DealDetail from './DealDetail'
 import SearchBar from './SearchBar'
 
 class App extends React.Component {
-  titleXPos = new Animated.Value(0)
+
   state = {
     deals: [],
     currentDealId: null
