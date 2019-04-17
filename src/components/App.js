@@ -13,7 +13,6 @@ class App extends React.Component {
   titleXPos = new Animated.Value(0)
   state = {
     deals: [],
-    dealsFromSearch: [],
     currentDealId: null
   }
 
@@ -27,11 +26,11 @@ class App extends React.Component {
   }
 
   searchDeals = async (searchTerm) => {
-    let dealsFromSearch = []
+    let deals = []
     if (searchTerm) {
-      dealsFromSearch = await ajax.fetchDealSearchResults(searchTerm)
+      deals = await ajax.fetchDealSearchResults(searchTerm)
     }
-    this.setState({ dealsFromSearch })
+    this.setState({ deals })
   }
 
   setCurrentDeal = (dealId) => {
@@ -61,14 +60,11 @@ class App extends React.Component {
         </View>
       )
     }
-    const dealsToDisplay =
-      this.state.dealsFromSearch.length > 0
-        ? this.state.dealsFromSearch
-        : this.state.deals
+
       return (
         <View style={styles.main}>
           <SearchBar searchDeals={this.props.searchDeals} searchTerm={this.props.appData.searchTerm} />
-          <DealList deals={dealsToDisplay} onItemPress={this.setCurrentDeal} />
+          <DealList deals={this.state.deals} onItemPress={this.setCurrentDeal} />
         </View>
       )
   }
