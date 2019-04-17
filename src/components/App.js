@@ -2,7 +2,7 @@ import React from 'react'
 import {
   View,
   Animated,
-  StyleSheet,
+  StyleSheet
 } from 'react-native'
 import ajax from '../util/ajax'
 import DealList from './DealList'
@@ -14,7 +14,7 @@ class App extends React.Component {
   state = {
     deals: [],
     dealsFromSearch: [],
-    currentDealId: null,
+    currentDealId: null
   }
 
   async componentWillMount() {
@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    const deals = await ajax.fetchInitialDeals()
+    const deals = await ajax.fetchDealSearchResults()
     this.setState({ deals })
   }
 
@@ -36,13 +36,13 @@ class App extends React.Component {
 
   setCurrentDeal = (dealId) => {
     this.setState({
-      currentDealId: dealId,
+      currentDealId: dealId
     })
   }
 
   unsetCurrentDeal = () => {
     this.setState({
-      currentDealId: null,
+      currentDealId: null
     })
   }
   
@@ -67,7 +67,7 @@ class App extends React.Component {
         : this.state.deals
       return (
         <View style={styles.main}>
-          <SearchBar searchDeals={this.searchDeals} />
+          <SearchBar searchDeals={this.props.searchDeals} searchTerm={this.props.appData.searchTerm} />
           <DealList deals={dealsToDisplay} onItemPress={this.setCurrentDeal} />
         </View>
       )
@@ -78,14 +78,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   main: {
-    marginTop: 30,
+    marginTop: 30
   },
   header: {
-    fontSize: 40,
-  },
+    fontSize: 40
+  }
 })
 
 export default App

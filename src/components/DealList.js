@@ -7,7 +7,7 @@ class DealList extends React.Component {
 
   static propTypes = {
     deals: PropTypes.array.isRequired,
-    onItemPress: PropTypes.func.isRequired,
+    onItemPress: PropTypes.func.isRequired
   }
 
   render() {
@@ -27,7 +27,7 @@ class DealList extends React.Component {
 const styles = StyleSheet.create({
   list: {
     backgroundColor: '#eee'
-  },
+  }
 })
 
 export default DealList

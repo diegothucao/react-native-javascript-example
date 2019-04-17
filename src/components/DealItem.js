@@ -6,7 +6,7 @@ import { priceDisplay } from '../util/util'
 class DealItem extends React.Component {
   static propTypes = {
     deal: PropTypes.object.isRequired,
-    onPress: PropTypes.func.isRequired,
+    onPress: PropTypes.func.isRequired
   }
 
   handlePress = () => {
@@ -33,35 +33,35 @@ class DealItem extends React.Component {
 const styles = StyleSheet.create({
   deal: {
     marginHorizontal: 16,
-    marginTop: 16,
+    marginTop: 16
   },
   image: {
     width: '100%',
     height: 150,
-    backgroundColor: '#ccc',
+    backgroundColor: '#ccc'
   },
   info: {
     padding: 10,
     backgroundColor: '#fff',
     borderColor: '#bbb',
     borderWidth: 1,
-    borderTopWidth: 0,
+    borderTopWidth: 0
   },
   title: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: 5
   },
   footer: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   cause: {
-    flex: 2,
+    flex: 2
   },
   price: {
     flex: 1,
-    textAlign: 'right',
-  },
+    textAlign: 'right'
+  }
 })
 
 export default DealItem
