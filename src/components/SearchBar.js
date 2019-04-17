@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
 
   static propTypes = {
     searchDeals: PropTypes.func.isRequired,
-    searchTerm: PropTypes.string.isRequired
+    searchTerm: PropTypes.string
   }
 
   debouncedSearchDeals = debounce(this.props.searchDeals, 300)

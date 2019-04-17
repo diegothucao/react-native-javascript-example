@@ -63,7 +63,7 @@ class App extends React.Component {
 
       return (
         <View style={styles.main}>
-          <SearchBar searchDeals={this.props.searchDeals} searchTerm={this.props.appData.searchTerm} />
+          <SearchBar searchDeals={this.props.searchDeals}/>
           <DealList deals={this.state.deals} onItemPress={this.setCurrentDeal} />
         </View>
       )
