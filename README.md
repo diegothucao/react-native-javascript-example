@@ -1,4 +1,4 @@
-# react-native-javascript-example
+# React Native and Javascript
 This is an essential example to build react-native app using Javascript
 
 Step to run
