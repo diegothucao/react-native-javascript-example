@@ -1,5 +1,5 @@
 # React Native and Javascript
-This is an essential example to build react-native app using Javascript
+This is an essential example to build React-native app using Javascript
 
 Step to run
 1. Clone the [repo](https://github.com/diegothucao/react-native-javascript-example)
